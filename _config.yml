@@ -1,0 +1,16 @@
+title: Matteo Muraca
+email: muraca.matteo@icloud.com
+description:
+  Curious software engineer, currently working with Rust in the blockchain field.
+  Writing about my open source contributions and my experiments with new technologies.
+  
+baseurl: "" 
+url: "https://muraca.github.io"
+twitter_username: muracadev
+github_username:  muraca
+linkedin_username: matteo-muraca
+
+remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
+
+plugins:
+  - jekyll-feed

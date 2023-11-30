@@ -4,6 +4,7 @@ description:
   Curious software engineer, currently working with Rust in the blockchain field.
   Writing about my open source contributions and my experiments with new technologies.
   
+author: Matteo Muraca
 baseurl: "" 
 url: "https://muraca.github.io"
 twitter_username: muracadev
@@ -12,8 +13,12 @@ linkedin_username: matteo-muraca
 
 remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
 
-paginate: 5
-paginate_path: "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+
+paginate: 5
+paginate_path: "/posts/page:num/"
+
+feed:
+  tags: true

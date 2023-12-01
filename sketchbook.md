@@ -3,6 +3,8 @@ layout: page
 title: Sketchbook
 description: A collection of ideas for future blog posts.
 permalink: /sketchbook/
+background: /img/sketchbook.jpg
+caption: "Parc Güell, Barcelona, August 2023"
 ---
 
 # Open source contributions

@@ -2,6 +2,8 @@
 layout: page
 title: About me
 permalink: /about/
+background: /img/about.jpg
+caption: "Facultad de Derecho, Buenos Aires, January 2023"
 ---
 I'm a curious software engineer, particularly interested in modern programming languages and technologies.  
 I'm currently working with Rust in the blockchain field.  

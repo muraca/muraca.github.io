@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+  {% include head.html %}
+
+  <style>
+    header.masthead {
+      margin-bottom: 10px;
+    }
+    div.caption {
+      color: black;
+      background-color: lightgray;
+      border: 2px lightgray;
+      border-radius: 5px;
+      padding: 2px 5px;
+    }
+    h1 {
+      font-size: 60px !important;
+    }
+  </style>
+  <body>
+
+    {% include navbar.html %}
+    
+    <!-- Page Header -->
+    {% if page.background %}
+    <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+    {% elsif layout.background %}
+    <header class="masthead" style="background-image: url('{{ layout.background | prepend: site.baseurl | replace: '//', '/' }}')">
+    {% else %}
+    <header class="masthead">
+    {% endif %}
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              {% if page.title %}
+              <h1>{{ page.title }}</h1>
+              {% else %}
+              <h1>{{ site.title }}</h1>
+              {% endif %}
+
+              {% if page.description %}
+              <span class="subheading">{{ page.description }}</span>
+              {% elsif site.description and page.sitedescription %}
+              <span class="subheading">{{ site.description }}</span>
+              {% endif %}
+
+              {% if page.meta or layout.meta %}
+              <span class="meta">Posted by
+                <i>{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</i>
+                on {{ page.date | date: '%B %d, %Y' }} &middot;
+                {% include read_time.html content=page.content %}
+              </span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+          {% if page.caption %}
+          <div class="row" style="flex-direction: row-reverse; margin-left: 50px">
+            <div class="caption">{{page.caption}}</div>
+          </div>
+          {% endif %}
+      </div>
+    </header>
+
+    {{ content }}
+
+    {% include footer.html %} 
+
+    {% include scripts.html %}
+
+    {% include google-analytics.html %}
+
+  </body>
+
+</html>
